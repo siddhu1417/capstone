@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department and Semester Tabs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .tab img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .tab p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .tab:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Department Tabs -->
+    <div class="container">
+        <div class="tab" id="computerTab">
+            <img src="computer_icon.png" alt="Computer">
+            <p>Computer</p>
+        </div>
+        <div class="tab">
+            <img src="it_icon.png" alt="IT">
+            <p>IT</p>
+        </div>
+        <div class="tab">
+            <img src="mechanical_icon.png" alt="Mechanical">
+            <p>Mechanical</p>
+        </div>
+        <div class="tab">
+            <img src="civil_icon.png" alt="Civil">
+            <p>Civil</p>
+        </div>
+    </div>
+
+    <script>
+        // Ensure the DOM is fully loaded before adding event listeners
+        document.addEventListener('DOMContentLoaded', function () {
+            const computerTab = document.getElementById('computerTab');
+
+            // Add event listener for the Computer tab
+            computerTab.addEventListener('click', function() {
+                // Redirect to another page (replace 'semester.html' with your actual page)
+                window.location.href = 'semester.html';
+            });
+        });
+    </script>
+</body>
+</html>

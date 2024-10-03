@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester Tabs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .semester-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 400px;
+        }
+
+        .semester-tab {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .semester-tab p {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .semester-tab span {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .semester-tab:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Semester Tabs -->
+    <div class="semester-container">
+        <div class="semester-tab" id="semester1Tab">
+            <p>1</p>
+            <span>Semester 1</span>
+        </div>
+        <div class="semester-tab">
+            <p>2</p>
+            <span>Semester 2</span>
+        </div>
+        <div class="semester-tab">
+            <p>3</p>
+            <span>Semester 3</span>
+        </div>
+        <div class="semester-tab">
+            <p>4</p>
+            <span>Semester 4</span>
+        </div>
+        <div class="semester-tab">
+            <p>5</p>
+            <span>Semester 5</span>
+        </div>
+        <div class="semester-tab">
+            <p>6</p>
+            <span>Semester 6</span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('semester1Tab').addEventListener('click', function() {
+            window.location.href = 'semester1.html';  // Redirect to the Semester 1 subjects page
+        });
+    </script>
+</body>
+</html>
